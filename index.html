@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
         :root {
             --bg: #0c0c0c;
             --cream: #FAF8F5;
@@ -20,9 +19,7 @@
             --card-border: #2a2a2a;
             --section-light: #f7f5f2;
         }
-
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Inter', -apple-system, sans-serif;
             background: var(--bg);
@@ -30,7 +27,6 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-
         /* ═══════════════════════════════════════
            NAVIGATION
         ═══════════════════════════════════════ */
@@ -46,7 +42,6 @@
             align-items: center;
             transition: all 0.4s ease;
         }
-
         .nav.scrolled {
             background: rgba(12,12,12,0.92);
             backdrop-filter: blur(20px);
@@ -54,7 +49,6 @@
             padding: 0.8rem 3rem;
             border-bottom: 1px solid var(--card-border);
         }
-
         .nav-logo {
             font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
@@ -63,13 +57,11 @@
             text-decoration: none;
             letter-spacing: 0.02em;
         }
-
         .nav-links {
             display: flex;
             gap: 2.2rem;
             list-style: none;
         }
-
         .nav-links a {
             font-size: 0.82rem;
             font-weight: 500;
@@ -79,9 +71,7 @@
             text-transform: uppercase;
             transition: color 0.2s;
         }
-
         .nav-links a:hover { color: var(--white); }
-
         .nav-cta {
             padding: 0.55rem 1.4rem;
             background: var(--warm);
@@ -91,12 +81,10 @@
             opacity: 1 !important;
             transition: all 0.3s ease;
         }
-
         .nav-cta:hover {
             background: var(--white) !important;
             transform: translateY(-1px);
         }
-
         /* ═══════════════════════════════════════
            HERO — FULL BLEED CINEMATIC
         ═══════════════════════════════════════ */
@@ -109,20 +97,17 @@
             padding: 6rem 4rem;
             overflow: hidden;
         }
-
         .hero-bg {
             position: absolute;
             inset: 0;
             z-index: 0;
         }
-
         .hero-bg img, .hero-bg video {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center 30%;
         }
-
         .hero-bg::after {
             content: '';
             position: absolute;
@@ -135,13 +120,11 @@
                 rgba(12,12,12,0.3) 100%
             );
         }
-
         .hero-content {
             position: relative;
             z-index: 2;
             max-width: 850px;
         }
-
         .hero-eyebrow {
             display: inline-block;
             font-size: 0.75rem;
@@ -153,7 +136,6 @@
             opacity: 0;
             animation: fadeUp 0.8s ease forwards 0.2s;
         }
-
         .hero-name {
             font-family: 'Playfair Display', serif;
             font-size: clamp(3.5rem, 9vw, 7rem);
@@ -164,12 +146,10 @@
             opacity: 0;
             animation: fadeUp 0.8s ease forwards 0.4s;
         }
-
         .hero-name em {
             font-style: italic;
             color: var(--warm);
         }
-
         .hero-sub {
             font-size: 1.15rem;
             font-weight: 300;
@@ -180,7 +160,6 @@
             opacity: 0;
             animation: fadeUp 0.8s ease forwards 0.6s;
         }
-
         .hero-buttons {
             display: flex;
             gap: 1rem;
@@ -188,7 +167,6 @@
             opacity: 0;
             animation: fadeUp 0.8s ease forwards 0.8s;
         }
-
         .btn {
             display: inline-flex;
             align-items: center;
@@ -201,32 +179,26 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-
         .btn-fill {
             background: var(--white);
             color: var(--bg);
         }
-
         .btn-fill:hover {
             background: var(--warm);
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(212,184,150,0.3);
         }
-
         .btn-outline {
             background: transparent;
             color: var(--white);
             border: 1px solid rgba(255,255,255,0.3);
         }
-
         .btn-outline:hover {
             border-color: var(--white);
             background: rgba(255,255,255,0.05);
             transform: translateY(-2px);
         }
-
         .btn svg { width: 16px; height: 16px; }
-
         .scroll-indicator {
             position: absolute;
             bottom: 2rem;
@@ -239,7 +211,6 @@
             opacity: 0;
             animation: fadeUp 0.8s ease forwards 1.2s;
         }
-
         .scroll-indicator span {
             font-size: 0.65rem;
             font-weight: 600;
@@ -248,24 +219,20 @@
             color: rgba(255,255,255,0.5);
             writing-mode: vertical-rl;
         }
-
         .scroll-indicator .line {
             width: 1px;
             height: 50px;
             background: var(--warm);
             animation: pulse 2s ease-in-out infinite;
         }
-
         @keyframes pulse {
             0%, 100% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
             50% { opacity: 1; transform: scaleY(1); }
         }
-
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(25px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         /* ═══════════════════════════════════════
            SECTION: INTRO / ABOUT (LIGHT)
         ═══════════════════════════════════════ */
@@ -274,7 +241,6 @@
             color: var(--bg);
             padding: 6rem 4rem;
         }
-
         .about-grid {
             max-width: 1100px;
             margin: 0 auto;
@@ -283,7 +249,6 @@
             gap: 4rem;
             align-items: center;
         }
-
         .about-label {
             font-size: 0.72rem;
             font-weight: 700;
@@ -292,7 +257,6 @@
             color: var(--warm);
             margin-bottom: 1.2rem;
         }
-
         .about-heading {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2rem, 3.5vw, 2.8rem);
@@ -300,28 +264,23 @@
             margin-bottom: 1.5rem;
             color: var(--bg);
         }
-
         .about-text {
             font-size: 1rem;
             line-height: 1.8;
             color: #555;
         }
-
         .about-text p + p { margin-top: 1rem; }
-
         .about-photo {
             position: relative;
             border-radius: 16px;
             overflow: hidden;
             aspect-ratio: 4/5;
         }
-
         .about-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .about-photo .photo-caption {
             position: absolute;
             bottom: 0;
@@ -333,7 +292,6 @@
             color: rgba(255,255,255,0.9);
             font-style: italic;
         }
-
         /* ═══════════════════════════════════════
            FUN FACTS STRIP
         ═══════════════════════════════════════ */
@@ -341,7 +299,6 @@
             background: var(--bg);
             padding: 4rem;
         }
-
         .facts-inner {
             max-width: 1100px;
             margin: 0 auto;
@@ -349,7 +306,6 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
         }
-
         .fact-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -357,13 +313,11 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
         .fact-card:hover {
             border-color: var(--warm);
             transform: translateY(-4px);
             box-shadow: 0 8px 30px rgba(212,184,150,0.1);
         }
-
         .fact-img {
             width: 100%;
             height: 180px;
@@ -372,34 +326,28 @@
             filter: brightness(0.85);
             transition: filter 0.3s ease, transform 0.4s ease;
         }
-
         .fact-card:hover .fact-img {
             filter: brightness(1);
             transform: scale(1.03);
         }
-
         .fact-img-wrap {
             overflow: hidden;
         }
-
         .fact-body {
             padding: 1.2rem 1.3rem 1.4rem;
             text-align: center;
         }
-
         .fact-title {
             font-weight: 700;
             font-size: 0.9rem;
             color: var(--white);
             margin-bottom: 0.4rem;
         }
-
         .fact-desc {
             font-size: 0.82rem;
             color: var(--gray);
             line-height: 1.5;
         }
-
         /* ═══════════════════════════════════════
            WHAT I BRING (DARK)
         ═══════════════════════════════════════ */
@@ -407,31 +355,25 @@
             background: var(--bg);
             padding: 6rem 4rem;
         }
-
         .section-center {
             max-width: 1100px;
             margin: 0 auto;
         }
-
         .section-header {
             text-align: center;
             margin-bottom: 3.5rem;
         }
-
         .section-header .about-label { color: var(--warm); }
-
         .section-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2rem, 3.5vw, 2.8rem);
             color: var(--white);
         }
-
         .strengths-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
         }
-
         .str-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -441,7 +383,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .str-card::before {
             content: '';
             position: absolute;
@@ -453,15 +394,12 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-
         .str-card:hover::before { opacity: 1; }
-
         .str-card:hover {
             border-color: rgba(212,184,150,0.3);
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
         }
-
         .str-num {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
@@ -469,20 +407,17 @@
             color: rgba(212,184,150,0.2);
             margin-bottom: 0.8rem;
         }
-
         .str-title {
             font-weight: 700;
             font-size: 1.05rem;
             color: var(--white);
             margin-bottom: 0.6rem;
         }
-
         .str-desc {
             font-size: 0.9rem;
             color: var(--gray);
             line-height: 1.7;
         }
-
         /* ═══════════════════════════════════════
            EXPERIENCE (LIGHT)
         ═══════════════════════════════════════ */
@@ -491,24 +426,19 @@
             color: var(--bg);
             padding: 6rem 4rem;
         }
-
         .exp-inner {
             max-width: 900px;
             margin: 0 auto;
         }
-
         .exp-header {
             margin-bottom: 3rem;
         }
-
         .exp-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2rem, 3.5vw, 2.8rem);
             color: var(--bg);
         }
-
         .exp-list { display: flex; flex-direction: column; }
-
         .exp-item {
             display: grid;
             grid-template-columns: 120px 1fr;
@@ -517,11 +447,8 @@
             border-bottom: 1px solid #ddd;
             transition: all 0.2s;
         }
-
         .exp-item:first-child { border-top: 1px solid #ddd; }
-
         .exp-item:hover { padding-left: 0.5rem; }
-
         .exp-year {
             font-size: 0.8rem;
             font-weight: 700;
@@ -529,26 +456,22 @@
             letter-spacing: 0.05em;
             padding-top: 0.2rem;
         }
-
         .exp-role {
             font-weight: 700;
             font-size: 1.05rem;
             color: var(--bg);
             margin-bottom: 0.15rem;
         }
-
         .exp-company {
             font-size: 0.9rem;
             color: #777;
             margin-bottom: 0.6rem;
         }
-
         .exp-desc {
             font-size: 0.88rem;
             color: #666;
             line-height: 1.65;
         }
-
         /* ═══════════════════════════════════════
            PROJECTS (DARK)
         ═══════════════════════════════════════ */
@@ -556,12 +479,10 @@
             background: var(--bg);
             padding: 6rem 4rem;
         }
-
         .projects-inner {
             max-width: 1100px;
             margin: 0 auto;
         }
-
         .project-card {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -572,36 +493,30 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
         .project-card:hover {
             border-color: rgba(212,184,150,0.3);
             box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
-
         .project-image {
             position: relative;
             min-height: 320px;
             overflow: hidden;
         }
-
         .project-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-
         .project-card:hover .project-image img {
             transform: scale(1.03);
         }
-
         .project-details {
             padding: 3rem 3rem 3rem 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-
         .project-tag {
             display: inline-block;
             font-size: 0.68rem;
@@ -615,7 +530,6 @@
             margin-bottom: 1rem;
             width: fit-content;
         }
-
         .project-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
@@ -623,21 +537,18 @@
             color: var(--white);
             margin-bottom: 0.8rem;
         }
-
         .project-desc {
             font-size: 0.95rem;
             color: var(--gray);
             line-height: 1.75;
             margin-bottom: 1.5rem;
         }
-
         .project-skills {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1.5rem;
         }
-
         .project-skill {
             font-size: 0.72rem;
             font-weight: 600;
@@ -647,7 +558,6 @@
             padding: 0.3rem 0.75rem;
             border-radius: 50px;
         }
-
         .project-link {
             display: inline-flex;
             align-items: center;
@@ -658,21 +568,15 @@
             text-decoration: none;
             transition: gap 0.2s;
         }
-
         .project-link:hover { gap: 0.7rem; }
-
         .project-link svg { width: 16px; height: 16px; }
-
         @media (max-width: 900px) {
             .project-card {
                 grid-template-columns: 1fr;
             }
-
             .project-image { min-height: 220px; }
-
             .project-details { padding: 2rem; }
         }
-
         /* ═══════════════════════════════════════
            HIRE ME BANNER (DARK, CINEMATIC)
         ═══════════════════════════════════════ */
@@ -682,20 +586,17 @@
             text-align: center;
             overflow: hidden;
         }
-
         .hire-section .hire-bg {
             position: absolute;
             inset: 0;
             z-index: 0;
         }
-
         .hire-section .hire-bg img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             opacity: 0.3;
         }
-
         .hire-section .hire-bg::after {
             content: '';
             position: absolute;
@@ -706,40 +607,34 @@
                 rgba(12,12,12,0.85) 100%
             );
         }
-
         .hire-content {
             position: relative;
             z-index: 2;
             max-width: 650px;
             margin: 0 auto;
         }
-
         .hire-content h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.2rem, 4.5vw, 3.2rem);
             line-height: 1.15;
             margin-bottom: 1.2rem;
         }
-
         .hire-content h2 em {
             font-style: italic;
             color: var(--warm);
         }
-
         .hire-content p {
             font-size: 1.05rem;
             color: rgba(255,255,255,0.7);
             line-height: 1.8;
             margin-bottom: 2.5rem;
         }
-
         .hire-buttons {
             display: flex;
             justify-content: center;
             gap: 1rem;
             flex-wrap: wrap;
         }
-
         /* ═══════════════════════════════════════
            CONNECT / LINKS (DARK)
         ═══════════════════════════════════════ */
@@ -747,29 +642,24 @@
             background: var(--bg);
             padding: 5rem 4rem;
         }
-
         .connect-inner {
             max-width: 700px;
             margin: 0 auto;
         }
-
         .connect-header {
             text-align: center;
             margin-bottom: 2.5rem;
         }
-
         .connect-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             color: var(--white);
         }
-
         .connect-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
         }
-
         .connect-card {
             display: flex;
             align-items: center;
@@ -782,13 +672,16 @@
             color: var(--white);
             transition: all 0.25s ease;
         }
-
         .connect-card:hover {
             border-color: var(--warm);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(212,184,150,0.08);
         }
-
+        .connect-card.centered {
+            grid-column: 1 / -1;
+            max-width: 340px;
+            margin: 0 auto;
+        }
         .connect-icon {
             width: 42px;
             height: 42px;
@@ -799,23 +692,18 @@
             justify-content: center;
             flex-shrink: 0;
         }
-
         .connect-icon svg { width: 18px; height: 18px; color: var(--warm); }
-
         .connect-text { flex: 1; }
         .connect-title { font-weight: 600; font-size: 0.9rem; }
         .connect-desc { font-size: 0.78rem; color: var(--gray); }
-
         .connect-arrow {
             color: rgba(212,184,150,0.4);
             transition: all 0.2s;
         }
-
         .connect-card:hover .connect-arrow {
             color: var(--warm);
             transform: translateX(3px);
         }
-
         /* ═══════════════════════════════════════
            FOOTER
         ═══════════════════════════════════════ */
@@ -825,21 +713,17 @@
             border-top: 1px solid var(--card-border);
             background: var(--bg);
         }
-
         footer p {
             font-size: 0.82rem;
             color: var(--gray);
         }
-
         footer a {
             color: var(--warm);
             text-decoration: none;
             border-bottom: 1px solid rgba(212,184,150,0.3);
             transition: border-color 0.2s;
         }
-
         footer a:hover { border-color: var(--warm); }
-
         /* ═══════════════════════════════════════
            SCROLL REVEAL
         ═══════════════════════════════════════ */
@@ -848,12 +732,10 @@
             transform: translateY(35px);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
-
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
         /* ═══════════════════════════════════════
            RESPONSIVE
         ═══════════════════════════════════════ */
@@ -862,31 +744,23 @@
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
             }
-
             .about-photo { max-width: 400px; }
-
             .strengths-grid { grid-template-columns: 1fr; }
-
             .facts-inner {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
         @media (max-width: 650px) {
             .nav { padding: 1rem 1.5rem; }
             .nav.scrolled { padding: 0.7rem 1.5rem; }
             .nav-links { gap: 1rem; }
             .nav-links a { font-size: 0.72rem; }
             .nav-cta { display: none; }
-
             .hero { padding: 4rem 1.5rem; }
-
             .hero-name {
                 font-size: clamp(2.8rem, 12vw, 4rem);
             }
-
             .scroll-indicator { display: none; }
-
             .section-light,
             .section-dark,
             .exp-section,
@@ -895,22 +769,18 @@
             .facts-strip {
                 padding: 4rem 1.5rem;
             }
-
             .facts-inner { grid-template-columns: 1fr 1fr; }
-
             .connect-grid { grid-template-columns: 1fr; }
-
+            .connect-card.centered { max-width: 100%; }
             .exp-item {
                 grid-template-columns: 80px 1fr;
                 gap: 1rem;
             }
-
             .hire-buttons { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
-
     <!-- ═══ NAVIGATION ═══ -->
     <nav class="nav" id="nav">
         <a href="#top" class="nav-logo">Ashley Erin Holness</a>
@@ -922,7 +792,6 @@
             <li><a href="#hire">Contact</a></li>
         </ul>
     </nav>
-
     <!-- ═══ HERO — FULL BLEED CINEMATIC ═══ -->
     <section class="hero" id="top">
         <div class="hero-bg">
@@ -947,7 +816,6 @@
             <div class="line"></div>
         </div>
     </section>
-
     <!-- ═══ ABOUT (LIGHT SECTION) ═══ -->
     <section class="section-light" id="about">
         <div class="about-grid reveal">
@@ -960,19 +828,16 @@
                 </div>
             </div>
             <div class="about-photo">
-                <!-- SWAP THIS: Replace with a photo of you -->
                 <img src="Portrait.png" alt="Ashley Erin Holness">
                 <div class="photo-caption"></div>
             </div>
         </div>
     </section>
-
     <!-- ═══ FUN FACTS STRIP ═══ -->
     <div class="facts-strip">
         <div class="facts-inner reveal">
             <div class="fact-card">
                 <div class="fact-img-wrap">
-                    <!-- SWAP: Replace with a photo of you at Puppy Sphere -->
                     <img class="fact-img" src="PuppyYogaInstructor.JPG" alt="Puppy Yoga">
                 </div>
                 <div class="fact-body">
@@ -982,7 +847,6 @@
             </div>
             <div class="fact-card">
                 <div class="fact-img-wrap">
-                    <!-- SWAP: Replace with a photo from Australia -->
                     <img class="fact-img" src="IMG_9278.JPG" alt="Australia">
                 </div>
                 <div class="fact-body">
@@ -992,7 +856,6 @@
             </div>
             <div class="fact-card">
                 <div class="fact-img-wrap">
-                    <!-- SWAP: Replace with a photo of food you've made -->
                     <img class="fact-img" src="C149F336-C236-47F8-957E-C66F76AEE147.JPG" alt="Home cooking">
                 </div>
                 <div class="fact-body">
@@ -1002,7 +865,6 @@
             </div>
             <div class="fact-card">
                 <div class="fact-img-wrap">
-                    <!-- SWAP: Replace with a photo of the stationery sets or Rikers work -->
                     <img class="fact-img" src="IMG_9457.jpg" alt="Community work">
                 </div>
                 <div class="fact-body">
@@ -1012,7 +874,6 @@
             </div>
         </div>
     </div>
-
     <!-- ═══ WHAT I BRING (DARK) ═══ -->
     <section class="section-dark" id="strengths">
         <div class="section-center">
@@ -1044,7 +905,6 @@
             </div>
         </div>
     </section>
-
     <!-- ═══ EXPERIENCE (LIGHT) ═══ -->
     <section class="exp-section" id="experience">
         <div class="exp-inner">
@@ -1073,7 +933,7 @@
                     <div class="exp-year">2024 – Now</div>
                     <div>
                         <div class="exp-role">Resident Assistant</div>
-                        <div class="exp-company">Boston Univerity Residence Life, Boston, MA</div>
+                        <div class="exp-company">Boston University Residence Life, Boston, MA</div>
                         <div class="exp-desc">Serve as a primary resource for residents, facilitating community-building events, enforcing policies, and addressing concerns.</div>
                     </div>
                 </div>
@@ -1088,7 +948,6 @@
             </div>
         </div>
     </section>
-
     <!-- ═══ PROJECTS (DARK) ═══ -->
     <section class="projects-section" id="projects">
         <div class="projects-inner">
@@ -1098,27 +957,25 @@
             </div>
             <div class="project-card reveal">
                 <div class="project-image">
-                    <!-- SWAP THIS: Replace with a screenshot or image of StudioKey -->
                     <img src="Studio (1).png" alt="StudioKey project">
                 </div>
                 <div class="project-details">
                     <span class="project-tag">Featured Project</span>
                     <h3 class="project-title">StudioKey</h3>
-                    <p class="project-desc">StudioKey is a management platform I designed for boutique fitness studios that are stuck overpaying for software built for large chains. By leveraging a modern tech stack and cutting unnecessary features like marketplace listings, it delivers scheduling, analytics, instructor performance tracking, and AI-powered coaching at a fraction of the typical cost. The platform serves three distinct user types through dedicated portals for customers, managers, and instructors, with a pricing model designed to scale alongside the studio's growth..</p>
+                    <p class="project-desc">StudioKey is a management platform I designed for boutique fitness studios that are stuck overpaying for software built for large chains. By leveraging a modern tech stack and cutting unnecessary features like marketplace listings, it delivers scheduling, analytics, instructor performance tracking, and AI-powered coaching at a fraction of the typical cost. The platform serves three distinct user types through dedicated portals for customers, managers, and instructors, with a pricing model designed to scale alongside the studio's growth.</p>
                     <div class="project-skills">
-                        <span class="User-Centered Design">User-Centered Design</span>
-                        <span class="Product Strategy">Product Strategy</span>
-                        <span class="Technical Prototyping">Technical Prototyping</span>
+                        <span class="project-skill">User-Centered Design</span>
+                        <span class="project-skill">Product Strategy</span>
+                        <span class="project-skill">Technical Prototyping</span>
                     </div>
                     <a href="https://studio-key.vercel.app/" class="project-link">
-    View Project
-    <svg xmlns="https://studio-key.vercel.app/" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        View Project
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- ═══ HIRE ME (CINEMATIC BANNER) ═══ -->
     <section class="hire-section" id="hire">
         <div class="hire-bg">
@@ -1130,17 +987,12 @@
             <p>I'm looking for an internship in product management or operations where I can learn fast, contribute meaningfully, and grow with a team that cares about doing great work. If that sounds like yours, I'd love to hear from you.</p>
             <div class="hire-buttons">
                 <a href="mailto:aerin05@bu.edu" class="btn btn-fill">
-                    <svg xmlns="https://drive.google.com/file/d/1dz7nhyZDmbb0VkqZn8PlUk-I7rtqyHVS/view" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                     Get in Touch
-                </a>
-                <a href="https://drive.google.com/file/d/1dz7nhyZDmbb0VkqZn8PlUk-I7rtqyHVS/view" class="btn btn-outline" target="_blank">
-                    <svg xmlns="https://drive.google.com/file/d/1dz7nhyZDmbb0VkqZn8PlUk-I7rtqyHVS/view" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-                    View My Resume
                 </a>
             </div>
         </div>
     </section>
-
     <!-- ═══ CONNECT ═══ -->
     <section class="connect-section">
         <div class="connect-inner">
@@ -1169,25 +1021,23 @@
                     </div>
                     <svg class="connect-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
-                <a href="https://drive.google.com/file/d/1dz7nhyZDmbb0VkqZn8PlUk-I7rtqyHVS/view" class="connect-card" target="_blank">
+                <a href="https://drive.google.com/file/d/1dz7nhyZDmbb0VkqZn8PlUk-I7rtqyHVS/view" class="connect-card centered" target="_blank">
                     <div class="connect-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                     </div>
                     <div class="connect-text">
                         <div class="connect-title">Resume</div>
-                        <div class="https://drive.google.com/file/d/1dz7nhyZDmbb0VkqZn8PlUk-I7rtqyHVS/view">Download my latest resume</div>
+                        <div class="connect-desc">Download my latest resume</div>
                     </div>
-                    <svg class="connect-arrow" xmlns="https://drive.google.com/file/d/1dz7nhyZDmbb0VkqZn8PlUk-I7rtqyHVS/view" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                   </a>
+                    <svg class="connect-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
             </div>
         </div>
     </section>
-
     <!-- ═══ FOOTER ═══ -->
     <footer>
         <p>Want to work together? Reach out at <a href="mailto:aerin05@bu.edu">aerin05@bu.edu</a></p>
     </footer>
-
     <!-- ═══ SCRIPTS ═══ -->
     <script>
         // Sticky nav background on scroll
@@ -1195,7 +1045,6 @@
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 80);
         });
-
         // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
@@ -1205,9 +1054,7 @@
                 }
             });
         }, { threshold: 0.12 });
-
         reveals.forEach(el => observer.observe(el));
     </script>
-
 </body>
 </html>
