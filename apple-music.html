@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Apple Music · Skip Explicit Songs — a product case study by Ashley Erin Holness. A one-tap way to keep clean playback without touching your library.">
+<meta name="author" content="Ashley Erin Holness">
+<link rel="canonical" href="https://www.ashleyholness.site/apple-music.html">
+<title>Apple Music · Skip Explicit Songs — Case Study by Ashley Erin Holness</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root{
+  --bg:#F5F5F5; --paper:#FFFFFF; --ink:#2b2523; --brown:#504443;
+  --muted:#7c7370; --line:#e3ddd8; --accent:#9a7b5f;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+.wrap{max-width:820px;margin:0 auto;padding:0 2rem;}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(245,245,245,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+.topbar-inner{max-width:820px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+.back{font-size:.8rem;letter-spacing:.06em;color:var(--muted);transition:color .2s;}
+.back:hover{color:var(--brown);}
+.topbar .name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--brown);}
+
+.hero{padding:5rem 0 3rem;border-bottom:1px solid var(--line);}
+.eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:1.2rem;}
+.hero h1{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.05;letter-spacing:-.02em;color:var(--brown);margin-bottom:1.4rem;}
+.hero .sub{font-size:1.15rem;font-weight:300;color:#4a4340;max-width:640px;}
+.meta{display:flex;gap:2.5rem;margin-top:2.5rem;flex-wrap:wrap;}
+.meta div{font-size:.85rem;}
+.meta .k{text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;color:var(--accent);font-weight:700;margin-bottom:.3rem;}
+.meta .v{color:var(--ink);font-weight:500;}
+
+section.block{padding:3.5rem 0;border-bottom:1px solid var(--line);}
+.block .label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.9rem;}
+.block h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.6rem,3.2vw,2.1rem);color:var(--brown);margin-bottom:1.3rem;letter-spacing:-.01em;}
+.block p{color:#453e3b;margin-bottom:1.1rem;font-size:1.02rem;}
+.block ul{margin:0 0 1.1rem 1.2rem;color:#453e3b;}
+.block li{margin-bottom:.6rem;}
+.block strong{color:var(--brown);}
+
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:1.8rem;}
+.pillar{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.6rem;}
+.pillar .num{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--accent);margin-bottom:.5rem;}
+.pillar h3{font-size:1rem;color:var(--brown);margin-bottom:.4rem;}
+.pillar p{font-size:.9rem;color:var(--muted);margin:0;}
+
+.metric{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.6rem;margin-top:1.4rem;}
+.metric .k{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.4rem;}
+.metric .v{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--brown);}
+
+.end{padding:4rem 0;text-align:center;}
+.end a{display:inline-block;margin-top:1.4rem;padding:.85rem 1.8rem;border-radius:50px;background:var(--brown);color:#f3ece6;font-weight:600;font-size:.85rem;transition:transform .2s;}
+.end a:hover{transform:translateY(-2px);}
+footer{background:var(--brown);color:rgba(255,255,255,.55);text-align:center;padding:2rem;font-size:.8rem;}
+
+@media(max-width:560px){.pillars{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="back" href="index.html">← Back to portfolio</a>
+    <span class="name">Ashley Erin Holness</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Apple Music · Mobile · Product case study</p>
+    <h1>Automatically skip explicit songs</h1>
+    <p class="sub">A one-tap way to keep clean playback in the car, at work, or at the dinner table — without touching a single thing in your library.</p>
+    <div class="meta">
+      <div><div class="k">Role</div><div class="v">Product</div></div>
+      <div><div class="k">Surface</div><div class="v">iOS / CarPlay</div></div>
+      <div><div class="k">Question</div><div class="v">Should Apple Music add an in-the-moment clean playback toggle?</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">The Problem</p>
+    <h2>How do people keep music clean today?</h2>
+    <p>Plenty of listeners love explicit music but don't always want it playing out loud — with kids in the back seat, at an open desk, or hosting a room full of people. Apple Music gives them three ways to handle this, and each has a real cost.</p>
+    <ul>
+      <li><strong>The Screen Time "Clean" filter</strong> works, but it lives with parental controls, needs a passcode, and hides explicit songs from the whole library — an all-or-nothing lockdown, not a preference.</li>
+      <li><strong>Hunting for the clean version of each song</strong> is tedious — the explicit version usually ranks first, and many songs have no clean version at all.</li>
+      <li><strong>Building a separate "clean" playlist</strong> means hours of curation to recreate music you already own, kept in sync by hand.</li>
+    </ul>
+    <p>None of these is "I still want my library exactly as it is, just don't play the swearing right now." That gap is the whole case study.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">Hypothesis</p>
+    <h2>Where the gap is</h2>
+    <p>If Apple Music offers a one-tap "Skip Explicit Songs" toggle, then listeners in shared and family contexts will keep listening longer — because clean playback no longer means locking down their library or switching to another source.</p>
+    <p>Plotting today's approaches against effort and whether they leave your library intact, one quadrant sits empty: convenient <em>and</em> nondestructive. Existing controls are high-effort, or they hide your library, or both. Nothing sits in the one-tap, library-intact corner.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">The Users</p>
+    <h2>Who is this for?</h2>
+    <p>Not a niche parental feature — it's for adults who love their music but want it clean in specific moments: the carpool parent, the open-plan professional, the host or instructor, and the personal-preference listener who simply prefers music without profanity.</p>
+    <p>These listeners hit real pain today: playback dead-ends when no clean version exists, a global Screen Time switch buried several menus deep, and shared spaces where a single explicit line lands in front of kids, coworkers, or guests.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">Final Solution</p>
+    <h2>Skip Explicit Songs</h2>
+    <p>An in-app playback toggle that plays the clean version when one exists, skips gracefully when it doesn't, and never touches your library — with an easy override and context-aware options.</p>
+    <div class="pillars">
+      <div class="pillar"><div class="num">01</div><h3>Nondestructive</h3><p>Your library, playlists, and search stay exactly as they are. Nothing is hidden or removed.</p></div>
+      <div class="pillar"><div class="num">02</div><h3>In the moment</h3><p>One tap in the Music app or Now Playing — a preference, not a passcode-locked restriction.</p></div>
+      <div class="pillar"><div class="num">03</div><h3>Graceful</h3><p>Plays the clean version if there is one, otherwise skips to the next song. No dead-end errors.</p></div>
+      <div class="pillar"><div class="num">04</div><h3>Context aware</h3><p>Auto-enable on CarPlay or with a Focus, so it matches the room you're in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">Pilot Metrics</p>
+    <h2>How we'll know it worked</h2>
+    <div class="metric"><div class="k">North Star Metric</div><div class="v">Weekly listening hours per opted-in user</div></div>
+    <p style="margin-top:1.3rem;">Leading indicators: toggle adoption and activation rate, CarPlay/Focus attach rate, and the share of explicit encounters resolved by a clean substitute vs. a hard skip. Counter-metrics watch "Play anyway" override rate and library engagement, while the "can't be played" error rate should fall toward zero for opted-in users.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">The Recommendation</p>
+    <h2>A real, unserved need Apple is positioned to own</h2>
+    <p>Apple Music's current explicit control answers only the parental-restriction question, and answers it destructively — hiding the library and dead-ending playback. A large everyday adult need goes unserved: clean playback in the moment, without touching a thing.</p>
+    <p>Skip Explicit Songs fills the empty quadrant with an in-app, nondestructive, context-aware toggle that also quietly fixes today's worst behavior. Recommendation: run a beta pilot against the north-star metric, then broaden surface by surface.</p>
+  </div>
+</section>
+
+<div class="end">
+  <div class="wrap">
+    <p style="color:var(--muted);">Thanks for reading.</p>
+    <a href="index.html">← Back to portfolio</a>
+  </div>
+</div>
+
+<footer>Apple Music · Skip Explicit Songs — Product case study by Ashley Erin Holness</footer>
+
+</body>
+</html>
